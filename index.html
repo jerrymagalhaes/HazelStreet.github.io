@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hazel Street Shop</title>
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+    </head>
+
+    <body>
+        <header>
+            <!--LOGO STARTS-->
+            <!--It is possible to add multiple classes for one tag/container. Example: <div class="first second">. Notice the space between the first and second class name.-->
+            <div class="logo-border">
+                <a href="index.html"><img class="Hazel-Street-logo-svg" src="Icons & logos/Hazel Street logo_green.svg" alt="Hazel Street logo"/></a>    
+            </div>
+            <!--LOGO STOPS-->
+
+            <!--In order to style in html, aside from adding style="" in a specific tag you can also add a <style></style> tag(s) and follow the same rule as a CSS file to style elements-->
+            <!--MAIN NAV STARTS-->
+            <nav class="main-nav">
+                <ul class="options-list">
+                    <!--To make a submenu, create a list item then a <ul> and <li> items nested within that list item-->
+                    <li class="shop-menu"><a class="shop-btn" href="#">SHOP</a><img class="shop-chevron" src="Icons & logos/shop-chevron.svg" alt="chevron icon"/>
+                        <ul class="shop-submenu">
+                            <li><a href="#">Shop all</a></li>
+                            <li><a href="#">Coasters</a></li>
+                            <li><a href="#">Games</a></li>
+                            <li><a href="#">Ornaments & Tags</a></li>
+                            <li><a href="#">Sketchbooks</a></li>
+                        </ul>
+                    </li>
+                    <li class="custom-order-menu"><a class="custom-order-btn" href="#">CUSTOM ORDER</a><img class="custom-order-chevron" src="Icons & logos/custom-order-chevron.svg" alt="chevron icon"/>
+                        <ul class="custom-order-submenu">
+                            <li><a href="#">Create custom order</a></li>
+                            <li><a href="#">Customizable items</a></li>
+                            <li><a href="#">Bulk orders</a></li>
+                        </ul>
+                    </li>
+                    <li class="more-info-menu"><a class="more-info-btn" href="#">MORE INFO</a><img class="more-info-chevron" src="Icons & logos/more-info-chevron.svg" alt="chevron icon"/>
+                        <ul class="more-info-submenu">
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">More info</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <!--ICONS STARTS-->
+                    <!--Insert icon or image within a list to make a dropdown from an Image/svg-->
+                    <!--There are two types of URLs, absolute and relative. Absolute have https:// followed by the domain name, relative is located in the same location as the current page-->
+                    <li class="search-menu"><img class="search-icon" src="Icons & logos/search-icon.svg" alt="Search icon" style="width: 30px; height: 30px;"/>
+                        <div class="search-field">
+                            <input class="search-input" type="text" placeholder="Search..."/>
+                        </div>
+                    </li>
+                    <!--Linking images require <a href="#"></a> tags similar to texts-->
+                    <li class="profile-menu"><img class="profile-icon" src="Icons & logos/profile-icon.svg" alt="Profile icon" style="width: 30px; height: 30px;"/>
+                        <ul class="profile-submenu"><img src="Icons & logos/profile-icon.svg" alt="profile icon" style="width: 100px; height: 100px; display: block; margin: 0 auto;"/>
+                            <li class="messages-option" style="margin-top: 15px; display: flex; align-items: center;"><img src="Icons & logos/Messages.svg" style="width: 20px; height: 20px; display: flex; justify-content: center;"/>
+                                <a href="#" style="font-size: 18px; margin-left: 10px;">Messages</a>
+                            </li>
+                            <li class="orders-option" style="margin-top: 15px; display: flex; align-items: center;"><img src="Icons & logos/Receipt.svg" style="width: 20px; height: 20px;"/>
+                                <a href="#" style="font-size: 18px; margin-left: 10px;">Orders</a>
+                            </li>
+                            <li class="payments-option" style="margin-top: 15px; display: flex; align-items: center;"><img src="Icons & logos/Credit card.svg" style="width: 20px; height: 20px;"/>
+                                <a href="#" style="font-size: 18px; margin-left: 10px;">Payments</a>
+                            </li>
+                            <li class="rewards-option" style="margin-top: 15px; display: flex; align-items: center;"><img src="Icons & logos/Rewards.svg" style="width: 20px; height: 20px;"/>
+                                <a href="#" style="font-size: 18px; margin-left: 10px;">Rewards</a>
+                            </li>
+                            <li class="settings-option" style="margin-top: 15px; display: flex; align-items: center;"><img src="Icons & logos/Gear.svg" style="width: 20px; height: 20px;"/>
+                                <a href="#" style="font-size: 18px; margin-left: 10px;">Settings</a>
+                            </li>
+                            <li class="sign-in-option" style="margin-top: 15px; display: flex; align-items: center;"><img src="Icons & logos/sign-in_1.svg" style="width: 20px; height: 20px;"/>
+                                <a href="#" style="font-size: 18px; margin-left: 10px;">Sign in</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="shopping-bag-menu"><img class="shopping-bag-icon" style="width: 25px; height: 30px;" src="Icons & logos/shopping-bag-icon.svg" alt="Shopping bag icon"/>
+                        <div class="bag-submenu">Your bag is empty</div>
+                    </li>
+                    <!--ICONS STOP-->
+                </ul>
+            </nav>
+            <!--MAIN NAV STOPS-->
+        </header>
+
+        <!--BANNER IMAGE STARTS-->
+        <div class="banner-container">
+            <img class="banner-image" src="Images/banner-image.png" alt="Banner image showing various products" style="width: 1440px; height: 360.49px;"/>
+        </div>
+        <!--BANNER IMAGE STOPS-->
+
+        <h1 class="titles-1">FEATURED</h1>
+
+        <!--GALLERY 1 STARTS-->
+        <div class="gallery-1">
+            <div class="light-hex-coasters-card" style="width: 316px; text-align: center;">
+                <img class="light-hex-coasters-image" src="Images/light-hex-coasters.png" alt="Image of light stained wood hexagonal coasters" style="margin-bottom: 10px; height: 316px;"/>
+                <h1 class="light-stained-info" style="font-size: 24px;">LIGHT STAINED<br>DRINK COASTERS<br>(SET OF 5)</h1>
+                <h1 class="light-stained-price" style="font-size: 20px; font-weight: lighter;">$16.50 USD</h1>
+            </div>
+            <div class="dark-hex-coasters-card" style="width: 316px; text-align: center;">
+                <img class="dark-hex-coasters-image" src="Images/dark-hex-coasters.png" alt="Image of dark stained wood hexagonal coasters" style="margin-bottom: 10px; height: 316px;"/>
+                <h1 class="dark-stained-info" style="font-size: 24px;">DARK STAINED<br>DRINK COASTERS<br>(SET OF 5)</h1>
+                <h1 class="dark-stained-price" style="font-size: 20px; font-weight: lighter;">$16.50 USD</h1>
+            </div>
+            <div class="keepsake-box-card" style="width: 316px; text-align: center;">
+                <img class="keepsake-box-image" src="Images/keepsake-box.png" alt="Image of geometric keepsake box" style="margin-bottom: 10px; height: 316px;"/>
+                <h1 class="keepsake-box-info" style="font-size: 24px;">KEEPSAKE BOX<br>WITH GEOMETRIC<br>CUT PATTERN</h1>
+                <h1 class="keepsake-box-price" style="font-size: 20px; font-weight: lighter;">$25.50 USD</h1>
+            </div>
+            <a href="keychain-purchase.html"><div class="wood-keychains-card" style="width: 316px; text-align: center;">
+                <img class="wood-keychains-image" src="Images/wood-keychains.png" alt="Image of wood keychains" style="margin-bottom: 10px; height: 316px;"/>
+                <h1 class="wood-keychains-info" style="font-size: 24px;">GEAR COASTERS<br>BIRCH WOOD<br>(SET OF 5)</h1>
+                <h1 class="wood-keychains-price" style="font-size: 20px; font-weight: lighter;">$13.00 USD</h1>
+            </div></a>
+        </div>   
+        <!--GALLERY 1 STOPS--> 
+
+        <!--GALLERY 2 STARTS-->
+        <div class="gallery-2">
+            <div class="always-bookmark-card" style="width: 316px; text-align: center;">
+                <img class="always-bookmark-image" src="Images/always-bookmark.png" alt="Image of wood bookmark saying 'always'"  style="margin-bottom: 10px; height: 316px;"/>
+                <h1 class="always-bookmark-info" style="font-size: 24px;">LASER CUT<br>BIRCH WOOD<br>"ALWAYS" BOOKMARK</h1>
+                <h1 class="always-bookmark-price" style="font-size: 20px; font-weight: lighter;">$4.50 USD</h1>
+            </div>
+            <div class="sketchbook-card" style="width: 316px; text-align: center;">
+                <img class="sketchbook-image" src="Images/sketchbook.png" alt="Image of wood sketchbook with flower laser cut design" style="margin-bottom: 10px; height: 316px;"/>
+                <h1 class="sketchbook-info" style="font-size: 24px;">SKETCHBOOK<br>BIRCH WOOD<br>HANDMADE</h1>
+                <h1 class="sketchbook-price" style="font-size: 20px; font-weight: lighter;">$25.50 USD</h1>
+            </div>
+            <div class="gear-coasters-card" style="width: 316px; text-align: center;">
+                <img class="gear-coasters-image" src="Images/gear-coasters.png" alt="Image of gear-shaped coasters" style="margin-bottom: 10px; height: 316px;"/>
+                <h1 class="gear-coasters-info" style="font-size: 24px;">GEAR COASTERS<br>BIRCH WOOD<br>(SET OF 5)</h1>
+                <h1 class="gear-coasters-price" style="font-size: 20px; font-weight: lighter;">$25.50 USD</h1>
+            </div>
+            <div class="snowflake-ornaments-card" style="width: 316px; text-align: center;">
+                <img class="snowflake-ornaments-image" src="Images/snowflake-ornaments.png" alt="Image of snowflake ornaments box" style="margin-bottom: 10px; height: 316px;"/>
+                <h1 class="snowflake-ornaments-info" style="font-size: 24px;">SNOWFLAKE<br>ORNAMENTS<br>(SET OF 12)</h1>
+                <h1 class="snowflake-ornaments-price" style="font-size: 20px; font-weight: lighter;">$20.80 USD</h1>
+            </div>
+        </div>   
+        <!--GALLERY 2 STOPS--> 
+        
+        <h1 class="titles-1">CATEGORIES</h1>
+
+        <!--CATEGORIES GALLERY STARTS-->
+        <div class="categories-gallery">
+            <div class="acrylic-coasters-card">
+                <img class="acrylic-coasters-image" src="Images/acrylic-coasters-image.png" alt="Image of acrylic hexagonal coasters" style="margin-bottom: 10px; width: 434px;"/>
+                <h1 class="titles-2">COASTERS</h1>
+            </div>
+            <div class="connect4-card">
+                <img class="connect4-image" src="Images/connect4-image.png" alt="Image of connect4 game" style="margin-bottom: 10px; width: 434px;"/>
+                <h1 class="titles-2">GAMES</h1>
+            </div>
+            <div class="acrylic-keychains-card">
+                <img class="acrylic-keychains-image" src="Images/acrylic-keychains-image.png" alt="Image of acrylic keychains" style="margin-bottom: 10px; width: 434px;"/>
+                <h1 class="titles-2">KEYCHAINS</h1>
+            </div>
+            <div class="gift-tags-card">
+                <img class="gift-tags-image" src="Images/gifttag-image.png" alt="Image of wood gift tags" style="margin-bottom: 10px; width: 434px;"/>
+                <h1 class="titles-2">ORNAMENTS & TAGS</h1>
+            </div>
+            <div class="sketchbooks-card">
+                <img class="sketchbooks-image" src="Images/sketchbooks.png" alt="Image of sketchbook with geometric design" style="margin-bottom: 10px; width: 434px;"/>
+                <h1 class="titles-2">SKETCHBOOKS</h1>
+            </div>
+        </div>
+        <!--CATEGORIES GALLERY STOPS-->
+
+        <!--INTRO STARTS-->
+        <div class="who-we-are-intro">
+            <h1 class="titles-2" style="text-decoration: underline; padding-bottom: 15px;">WHO WE ARE</h1>
+            <p style="text-align: center;">We are a company of artists, designers and creative thinkers. We dedicate ourselves to making  handmade items that will make great gifts or brighten anyone's day. 
+            We are inspired to create products that will truly make our customers happy. Have any questions about our products and services? Contact us at anytime.</p>
+        </div>
+        <!--INTRO STOPS-->
+
+        <!--FOOTER STARTS-->
+        <footer>
+            <div class="social-links">
+                <h1 class="titles-2" style="text-decoration: underline; text-align: center; padding-bottom: 15px;">FOLLOW US</h1>
+                <a href="https://www.etsy.com/shop/hazelstreetshop"><img src="Icons & logos/Etsy-logo.svg" alt="Etsy logo in green" style="width: 50px; height: 50px; border-radius: 5px;"/></a>
+                <a href="https://www.instagram.com/hazelstreetshop"><img src="Icons & logos/instagram-logo.svg" alt="Instagram logo in green" style="width: 50px; height: 50px; padding: 0 50px 0 50px;"/></a>
+                <a href="https://www.pinterest.com/hazelstreetshop"><img src="Icons & logos/Pinterest-round-logo.svg" alt="Pinterest logo in green" style="width: 50px; height: 50px;"/></a>
+            </div>
+            <div class="newsletter-form">
+                <h1 class="titles-2" style="text-decoration: underline; margin-bottom: 15px;">NEWSLETTER</h1>
+                <div class="email-and-submit">
+                    <!--Use <input> tag as well as type="text" property to create an email entry field-->
+                    <!--Input tags can have their shape changed similarly to <div> tags-->
+                    <div class="email-field">
+                        <input class="email-input" type="text" placeholder="Your email..."/>
+                    </div>
+                    <!--IMPORTANT! you can also create a submit button using input tags. Example: <input type="submit">-->
+                    <button class="submit-button">
+                        <h1 class="submit-text">SUBMIT</h1>
+                    </button>
+                </div>
+            </div>
+            <div class="store-info">
+                <ul class="store-info-1">
+                    <a href="#"><li>Shipping & Returns</li></a>
+                    <a href="#"><li>FAQ</li></a>
+                    <a href="#"><li>Contact</li></a>
+                </ul>
+                <ul class="store-info-2">
+                    <a href="#"><li>Refund Policy</li></a>
+                    <a href="#"><li>Privacy Policy</li></a>
+                    <a href="#"><li>Terms of Service</li></a>
+                </ul>
+            </div>
+        </footer>
+        <!--FOOTER STOPS-->
+    </body>
+</html>

@@ -1,0 +1,580 @@
+header {
+    /*Use https://www.w3.org */ /*To test the validity of your code*/
+    /*https://www.freecodecamp.org/news/html-page-width-height/*/ /*Set Width and Height for Full Page Size*/
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    font-size: 18px;
+}
+
+h1, p {
+    margin: 0;
+    padding: 0;
+    font-family:'Open Sans', sans-serif, Arial, Helvetica;
+    font-weight: normal;
+    /*Use font-weight: normal; to get rid of default <h1> bolding*/
+    color: #707070;
+}
+
+ul {
+    list-style: none;
+    font-family:'Open Sans', sans-serif, Arial, Helvetica;
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    /*text-decoration: none; gets rid of the underline when you link a text*/
+    color: #707070
+    /*color: #707070 changes color of the linked text from the default blue*/
+}
+
+nav ul li {
+    padding-left: 0;
+    /*Deletes padding left. Otherwise, the text will float right*/
+    list-style: none;
+    /*Resets or deletes default or set list style*/
+}
+
+/*---------------------LOGO STARTS--------------------------*/
+.logo-border {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    /*display: grid; followed by place-items: center; controls the horizontal center of the "child" elements. In this case the logo*/
+    place-items: center;
+}
+
+.Hazel-Street-logo-svg {
+    width: 150px;
+    height: auto;
+}
+/*---------------------LOGO STOPS----------------------------*/
+
+/*---------------------NAV STYLE STARTS----------------------*/
+.main-nav {
+    margin: 0 auto;
+    /*The margin shorthand rule centers containers horizontally. The value ‘0’ defines the top and 
+    bottom margins, and the value auto defines the left and right margins. The auto value automatically calculates 
+    equal amounts of margin on both sides of the container. See page 147 of web design book*/
+    border-radius: 10px;
+    width: 885px;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*Justify and centers elements horizontally. Used after display: flex;*/
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+    /*The box-shadow declaration attaches one or more shadows to a element. This is followed by the color of the shadow*/
+    background: #ffffff;
+    /*For the box-shadow, the values control as follows from left to right: 0px (Y value), 5px (X value), 30px (blur), 0px (spread)*/
+}
+
+.options-list {
+    margin: 0px;
+    width: 100%;
+    padding: 0 0;
+    /*Gets rid of the default padding*/
+    color: #707070;
+    list-style-type: none;
+    /*list-style-type: none; gets rid of bullets or any list style to <li> items*/
+    display: flex;
+    /*This makes the flex container display items inline; in this case your list and icons*/
+    justify-content: center;
+    align-items: center;
+    /*Aligns items and makes your list even vertically*/
+    gap: 80px;
+    /*Specifies gap between elements*/
+}
+
+.shop-chevron, .custom-order-chevron, .more-info-chevron {
+    width:20px;
+    height:10px;
+}
+
+.shop-btn {
+    margin-right: 5px;
+    padding-bottom: 20px;
+}
+
+.shop-submenu {
+    border-radius: 10px;
+    padding: 20px;
+    line-height: 2;
+    /*line-height: 2; controls vertical spacing between text*/
+    /*display: none;*/
+    /*Display: none; hides all contents within the class specified*/
+    display: black;
+    visibility: hidden;
+    /*visibility: hidden; sets visibility for all contents within the class specified*/
+    position: absolute;
+    /*Positions submenu inside menu option*/
+    background-color: white;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+    transform: translateY(14.5px) translateX(-20px);
+    z-index: 1;
+}
+
+.shop-menu:hover .shop-submenu {
+    visibility: visible;
+}
+
+.shop-menu:hover .shop-chevron {
+    transform: scaleY(-1);
+    /*Flips object vertically. You can also use the rotate value and add a degree*/
+    transition: 200ms;
+    /*Creates timed transition for objects transforming from one state to another*/
+}
+
+.custom-order-btn {
+    margin-right: 5px;  
+    padding-bottom: 20px;
+    align-items: center;
+}
+
+.custom-order-submenu {
+    border-radius: 10px;
+    padding: 20px; 
+    line-height: 2;
+    visibility: hidden;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+    transform: translateY(14.5px) translateX(-25px);
+    z-index: 1;
+}
+
+.custom-order-menu:hover .custom-order-submenu {
+    visibility: visible;
+}
+
+.custom-order-menu:hover .custom-order-chevron {
+    transform: scaleY(-1);
+    transition: 200ms;
+}
+
+.more-info-btn {
+    margin-right: 5px;
+    padding-bottom: 20px;
+}
+
+.more-info-submenu {
+    border-radius: 10px;
+    padding: 20px;
+    line-height: 2;
+    visibility: hidden;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+    transform: translateY(14.5px);
+    z-index: 1;
+}
+
+.more-info-menu:hover .more-info-submenu {
+    visibility: visible;
+}
+
+.more-info-menu:hover .more-info-chevron {
+    transform: scaleY(-1);
+    transition: 200ms;
+}
+
+.search-menu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /*Align images and contents vertically after display: flex; is used*/
+    cursor: pointer;
+}
+
+.search-field {
+    border-radius: 10px;
+    padding: 15px;
+    width: 275px;
+    position: absolute;
+    visibility: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+    transform: translateY(55px) translateX(-40px);
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    /*Deletes outline of search field when typing*/
+    width: 100%;
+    font-family:'Open Sans', sans-serif, Arial, Helvetica;
+    font-size: 18px;
+    color: #707070;
+}
+
+.search-menu:hover .search-field {
+    visibility: visible;
+} 
+
+.profile-menu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.profile-submenu {
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    visibility: hidden;
+    background: white;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+    transform: translateY(216px);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.profile-menu:hover .profile-submenu {
+    visibility: visible;
+}
+
+.shopping-bag-menu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.bag-submenu {
+    border-radius: 10px;
+    padding: 15px;
+    font-family:'Open Sans', sans-serif, Arial, Helvetica;
+    font-size: 18px;
+    font-weight: lighter;
+    color: #b7b7b7;
+    position: absolute;
+    visibility: hidden;
+    background-color: white;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+    transform: translateX(-55px) translateY(54px);
+    z-index: 1;
+}
+
+.shopping-bag-menu:hover .bag-submenu {
+    visibility: visible;
+}
+/*---------------------NAV STYLE STOPS----------------------*/
+
+/*---------------------MAIN PAGE ELEMENTS START-------------*/
+/*BANNER IMAGE STARTS*/
+.banner-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/*BANNER IMAGE STOPS*/
+
+/*TITLES STYLE STARTS*/
+.titles-1 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 28px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.titles-2 {
+    font-size: 28px;
+    text-align: center;
+}
+
+.titles-3 {
+    text-align: left;
+}
+/*TITLES STYLE STOPS*/
+
+/*GALLERY 1 STARTS*/
+.gallery-1 {
+    margin-bottom: 40px;    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 39px;
+}
+
+.wood-keychains-card:hover {
+    text-decoration: underline;
+}
+/*GALLERY 1 STOPS*/
+
+/*GALLERY 2 STARTS*/
+.gallery-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 39px;
+}
+/*GALLERY 2 STOPS*/
+
+/*CATEGORIES STARTS*/
+.categories-gallery {
+    padding-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 39px;
+}
+/*CATEGORIES STOPS*/
+
+/*INTRO STARTS*/
+.who-we-are-intro {
+    margin: 0 auto;
+    width: 897px;
+}
+/*INTRO STOPS*/
+/*---------------------MAIN PAGE ELEMENTS STOP--------------*/
+
+/*---------------------KEYCHAIN PURCHASE PAGE STARTS--------*/
+.keychain-purchase-info {
+    margin: 0 auto;
+    padding-bottom: 40px;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.keychain-slider {
+    display: flex;
+    width: 50rem;
+    overflow-x: auto;
+    overflow: hidden; 
+    /*Hides the overflow scrollbar*/
+    /*scroll-snap-type: x mandatory;*/
+    /*scroll-snap-type: makes the scrolling snap on the x-axis*/
+}
+
+.keychain-slider img {
+    flex: 1 0 100%;
+}
+
+.thumbnail-nav {
+    margin-top: 15px;
+    display: flex;
+    gap: 14px;
+} 
+
+.thumbnail-1:hover, .thumbnail-2:hover, .thumbnail-3:hover, .thumbnail-4:hover {
+    cursor: pointer;
+    outline: 4px solid #4CB748;
+    transition: 0.1s;
+}
+
+.keychain-purchase-options {
+    width: 550px;
+}
+
+.font-options {
+    border: 1px solid #b7b7b7;
+    border-radius: 10px;
+    width: 550px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.font-options .font-chevron {
+    position: absolute;
+    right: 15px;
+}
+
+.font-dropdown{
+    appearance: none;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 15px;
+    width: 100%;
+    height: 100%;
+    font-family:'Open Sans', sans-serif, Arial, Helvetica;
+    font-size: 18px;
+    font-weight: lighter;
+    color: #707070;
+}
+
+.name-input-field {
+    border: 1px solid #b7b7b7;
+    border-radius: 10px;
+    width: 550px;
+    height: 78px;
+    display: flex;
+}
+
+.name-input {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding-left: 15px;
+    font-family:'Open Sans', sans-serif, Arial, Helvetica;
+    font-size: 18px;
+    color: #707070;
+    width: 100%;
+}
+
+.price-container {
+    display: flex;
+    margin-top: 18px;
+}
+
+.qty-options {
+    border: 1px solid #b7b7b7;
+    border-radius: 10px;
+    width: 165px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.qty-options .qty-chevron {
+    position: absolute;
+    right: 15px;
+}
+
+.qty-dropdown{
+    appearance: none;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 15px;
+    width: 100%;
+    height: 100%;
+    font-family:'Open Sans', sans-serif, Arial, Helvetica;
+    font-size: 18px;
+    font-weight: lighter;
+    color: #707070;
+}
+
+.total-price {
+    margin-left: 15px;
+    border: 1px solid #B7B7B7;
+    border-radius: 10px;
+    padding-left: 15px;
+    width: 370px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.checkout-button {
+    margin-top: 15px;
+    border: none;
+    border-radius: 10px;
+    width: 550px;
+    height: 50px;
+    background-color: #4CB748;
+    cursor: pointer;
+}
+
+.checkout-text {
+    font-size: 24px;
+    color: white;
+}
+
+.suggestions-gallery-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 39px;
+}
+/*---------------------KEYCHAIN PURCHASE PAGE STOPS---------*/
+
+/*---------------------FOOTER STARTS------------------------*/
+footer {
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 989px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.email-and-submit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.email-field {
+    margin-left: 100px;
+    border: 1px solid #B7B7B7;
+    border-radius: 10px;
+    width:409px;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.email-input {
+    outline: none;
+    border: none;
+    /*Deletes outline of search field when typing*/
+    border-radius: 10px;
+    padding-left: 15px;
+    font-size: 18px;
+    font-family:'Open Sans', sans-serif, Arial, Helvetica;
+    color: #707070;
+    width: 409px;
+}
+
+::placeholder {
+    /*Call the placeholder property of a tag using double colons*/
+    color: #b7b7b7;
+    font-family:'Open Sans', sans-serif, Arial, Helvetica;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.submit-button {
+    border: none;
+    border-radius: 10px;
+    width: 120px;
+    height: 50px;
+    background-color: #4CB748;
+    cursor: pointer;
+}
+
+.submit-text {
+    font-size: 24px;
+    color: white;
+}
+
+.store-info-1 {
+    margin: 50px 0 0 0;
+    font-size: 20px;
+    font-weight: lighter;
+    color: #707070;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.store-info-2 {
+    margin: 15px 0 50px 0;
+    font-size: 20px;
+    font-weight: lighter;
+    color: #707070;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+/*---------------------FOOTER STOPS-------------------------*/
