@@ -309,6 +309,12 @@ nav ul li {
 .wood-keychains-card:hover {
     text-decoration: underline;
 }
+
+.wood-keychains-image:hover {
+    cursor: pointer;
+    outline: 4px solid #4CB748;
+    transition: 0.1s;
+}
 /*GALLERY 1 STOPS*/
 
 /*GALLERY 2 STARTS*/
